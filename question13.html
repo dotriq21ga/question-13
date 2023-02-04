@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    let arrObj = [
+        { name: 'Question 1', category: 'MultipleChoice' },
+        { name: 'Question 2', category: 'Slider' },
+        { name: 'Question 3', category: 'Text' },
+        { name: 'Question 4', category: 'MatrixTable' },
+        { name: 'Question 5', category: 'MultipleChoice' },
+        { name: 'Question 6', category: 'MultipleChoice' },
+        { name: 'Question 7', category: 'Text' },
+        { name: 'Question 8', category: 'MatrixTable' },
+    ]
+
+    const search = (string) => {
+        let search = []
+        arrObj.map((json) => {
+            if (json.category === string) {
+                search.push(json)
+            }
+
+        })
+        return search
+    }
+
+    const MultipleChoice = search('MultipleChoice')
+    const Slider = search('Slider')
+    const TextS = search('Text')
+    const MatrixTable = search('MatrixTable')
+
+    const object = {
+        MultipleChoice,
+        Slider,
+        Text: TextS,
+        MatrixTable
+    }
+
+    console.log(object)
+</script>
+
+</html>
